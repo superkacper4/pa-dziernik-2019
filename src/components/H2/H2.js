@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-const H1 = styled.h1`
+const H2 = styled.h2`
   margin: 0;
   padding: 0;
-  font-size: 6rem;
+  font-size: 2.5rem;
 `;
 
-export default H1;
+export default H2;
