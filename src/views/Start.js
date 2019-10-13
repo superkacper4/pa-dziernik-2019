@@ -11,8 +11,20 @@ const StyledWrapper = styled.main`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #43424f;
+  background: linear-gradient(to top left, #e66465, #9198e5);
+  background-size: 5000px 5000px;
   position: relative;
+  animation: start 10s ease-in-out infinite alternate;
+
+  @keyframes start {
+    0% {
+      background-position: 0% 0%;
+    }
+
+    100% {
+      background-position: 100% 100%;
+    }
+  }
 `;
 
 const Start = () => (
