@@ -7,6 +7,7 @@ const StyledWrapper = styled.div`
   background-color: #00729c;
   color: white;
   height: 100vh;
+  padding: 10px;
 `;
 
 const About = () => (

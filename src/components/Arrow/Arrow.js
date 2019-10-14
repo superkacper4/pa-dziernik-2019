@@ -5,7 +5,7 @@ const StyledArrow = styled.button`
   height: 50px;
   width: 50px;
   font-size: 25px;
-  background-color: #65848f;
+  background-color: #00729c;
   border: 1px solid white;
   border-radius: 10px;
   position: absolute;

@@ -13,7 +13,6 @@ const StyledWrapper = styled.main`
   justify-content: center;
   background: linear-gradient(to top left, #e66465, #9198e5);
   background-size: 5000px 5000px;
-  position: relative;
   animation: start 10s ease-in-out infinite alternate;
 
   @keyframes start {
