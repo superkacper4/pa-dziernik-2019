@@ -12,7 +12,7 @@ const Root = () => {
   return (
     <>
       <NavIcon openNav={openNav} setNav={setNav} />
-      <Nav openNav={openNav} />
+      <Nav openNav={openNav} setNav={setNav} />
       <GlobalStyle />
       <Start />
       <About />
