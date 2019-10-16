@@ -1,48 +1,68 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const StyledNavIcon = styled.button`
-  height: 7px;
+const StyledWrapper = styled.button`
+  height: 44px;
   width: 50px;
-  background-color: ${({ openNav }) => (openNav ? 'red' : 'white')};
+  background-color: transparent;
   position: fixed;
   top: 5%;
   right: 5%;
-  transition: 0.5s;
   z-index: 2;
+  padding: 0;
+  margin: 0;
   border: none;
+`;
+
+const StyledNavIcon = styled.div`
+  width: 50px;
+  height: 7px;
+  background-color: ${({ openNav }) => (openNav ? '#bf5858' : 'white')};
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  transition: background-color 0.5s;
 
   &::before {
     content: '';
-    height: 7px;
     width: 50px;
+    height: 7px;
     background-color: white;
-    position: fixed;
-    top: 5%;
-    right: 5%;
-    transition: 0.5s;
-    z-index: 2;
+    transform: translateY(15px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
     transform: ${({ openNav }) =>
-      openNav ? 'rotate(45deg) translateY(0)' : 'rotate(0) translateY(15px)'};
+      openNav
+        ? 'translateY(-50%) translateX(-50%) rotate(45deg)'
+        : 'translateY(calc(-50% - 15px)) translateX(-50%) rotate(0)'};
+    transition: transform 0.5s;
   }
 
   &::after {
     content: '';
-    height: 7px;
     width: 50px;
+    height: 7px;
     background-color: white;
-    position: fixed;
-    top: 5%;
-    right: 5%;
-    transition: 0.5s;
-    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
     transform: ${({ openNav }) =>
-      openNav ? 'rotate(-45deg) translateY(0)' : 'rotate(0) translateY(-15px)'};
+      openNav
+        ? 'translateY(-50%) translateX(-50%) rotate(-45deg)'
+        : 'translateY(calc(-50% + 15px)) translateX(-50%) rotate(0)'};
+    transition: transform 0.5s;
   }
 `;
 
 const NavIcon = ({ openNav, setNav }) => (
-  <StyledNavIcon onClick={() => setNav(!openNav)} openNav={openNav} />
+  <StyledWrapper onClick={() => setNav(!openNav)} openNav={openNav}>
+    <StyledNavIcon openNav={openNav} />
+    {/* <StyledNavIcon /> */}
+  </StyledWrapper>
 );
 
 export default NavIcon;
