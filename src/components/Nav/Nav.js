@@ -28,6 +28,7 @@ const StyledNavList = styled.ul`
 const StyledNavItem = styled.li`
   margin: 0;
   padding: 0;
+  text-align: center;
 `;
 
 const Nav = ({ openNav, setNav }) => {
@@ -39,8 +40,8 @@ const Nav = ({ openNav, setNav }) => {
     <StyledNav openNav={openNav}>
       <StyledNavList>
         <StyledNavItem onClick={() => scroll(2)}>About</StyledNavItem>
-        <StyledNavItem>test</StyledNavItem>
-        <StyledNavItem>test</StyledNavItem>
+        <StyledNavItem>Offer</StyledNavItem>
+        <StyledNavItem>Portfolio</StyledNavItem>
       </StyledNavList>
     </StyledNav>
   );
